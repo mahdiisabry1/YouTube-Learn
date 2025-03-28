@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+YouTube-Learn 🎥➗🧠
+Next.js YouTube Clone with AI-Powered Learning Content
 
-## Getting Started
+Project Screenshot
 
-First, run the development server:
+A modern educational YouTube clone built with Next.js, featuring AI-generated learning content, smart recommendations, and creator tools.
 
-```bash
+Key Features ✨
+Next.js 14 App Router for optimized performance
+
+AI Lesson Generator: Create educational videos from text prompts
+
+Smart Chapters: AI-generated video segments and summaries
+
+Interactive Transcripts: Searchable, clickable transcripts with translations
+
+Personalized Learning Paths: AI-curated content recommendations
+
+Virtual Tutor: AI avatar for explanations (using ElevenLabs/Deepgram)
+
+Automated Quizzes: AI-generated knowledge checks from video content
+
+Tech Stack 💻
+Core Framework
+Next.js 14 (App Router)
+
+TypeScript
+
+Tailwind CSS + Shadcn UI
+
+Backend Services
+Next.js API Routes
+
+Prisma ORM
+
+PostgreSQL (Vercel Storage)
+
+Firebase Storage (for videos)
+
+AI Integration
+OpenAI GPT-4 (Content generation)
+
+Whisper (Speech-to-text)
+
+Stable Diffusion (Thumbnails/illustrations)
+
+LangChain (for structured content creation)
+
+Pinecone (Vector search for recommendations)
+
+Getting Started 🏁
+Prerequisites
+Node.js 18+
+
+Python 3.10+ (for AI services)
+
+Vercel account (recommended for deployment)
+
+OpenAI API key
+
+Installation
+Clone the repository:
+
+bash
+Copy
+git clone https://github.com/mahdiisabry1/YouTube-Learn.git
+cd YouTube-Learn
+Install dependencies:
+
+bash
+Copy
+npm install
+Set up environment variables:
+
+bash
+Copy
+cp .env.example .env.local
+Fill in your credentials in .env.local
+
+Run the development server:
+
+bash
+Copy
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Project Structure (Next.js) 📂
+Copy
+YouTube-Learn/
+├── app/
+│   ├── (main)/               # Public routes
+│   ├── (creator)/            # Creator dashboard routes
+│   ├── api/                  # API routes
+│   └── assets/               # Static assets
+├── components/               # Reusable components
+├── lib/                      # Utilities/helpers
+├── prisma/                   # Database schema
+├── styles/                   # Global styles
+├── ai-services/              # Python microservices
+└── public/                   # Static files
+AI Workflows 🧠
+Content Creation Process:
+User submits topic/text prompt
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+AI generates:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Video script (GPT-4)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Voiceover (ElevenLabs)
 
-## Learn More
+Visual assets (Stable Diffusion)
 
-To learn more about Next.js, take a look at the following resources:
+Quiz questions (LangChain)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+System assembles final video (FFmpeg)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Learning Recommendations:
+Vector embeddings of video content
 
-## Deploy on Vercel
+User behavior analysis
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Knowledge gap identification
